@@ -39,35 +39,34 @@ public class HorseJumping {
         // Display results for new rider.
         int yourScore = calculateScore(completedCourse, judgeScore, jumpsSuccessful, timeBonus);
         System.out.println("Your final score is: " + yourScore + ". You are in group " + scorePosition + " in the competition");
-        
-        
-}
-  // Display scores and positions of other riders.
-  public static void displayScorePosition( String riderName, int scorePosition){
-    System.out.println(riderName + " is currently group "
-    + scorePosition + " in the competition.");
-}
-
-  // Method that determines rider position based on score. 
-  public static int calculateScorePosition(int riderScore){
-  int position = 4;
-    if(riderScore >= 1000) {
-    position = 1;
-}   else if(riderScore >= 500){
-    position = 2;  
-}   else if(riderScore >= 100){
-    position = 3;
-}
-  return position;
-}
-
-  // Method that calculates final score of new rider. 
-  public static int calculateScore(boolean completedCourse, int judgeScore, int jumpsSuccessful, int timeBonus){
-    
-    if(completedCourse){
-        int finalScore = judgeScore + jumpsSuccessful + timeBonus;
-        return finalScore;
     }
-    return -1;
-}
-}
+        // Display scores and positions of other riders.
+         public static void displayScorePosition( String riderName, int scorePosition){
+            System.out.println(riderName + " is currently group "
+            + scorePosition + " in the competition.");
+    }
+
+        // Method that determines rider position based on score. 
+         public static int calculateScorePosition(int riderScore){
+             int position = 4;
+             
+             if(riderScore >= 1000) {
+                 position = 1;
+        }   else if(riderScore >= 500){
+                 position = 2;  
+        }   else if(riderScore >= 100){
+                 position = 3;
+        }
+            return position;
+        }
+
+        // Method that calculates final score of new rider. 
+        public static int calculateScore(boolean completedCourse, int judgeScore, int jumpsSuccessful, int timeBonus){
+    
+            if(completedCourse){
+               int finalScore = judgeScore + jumpsSuccessful + timeBonus;
+               return finalScore;
+       }
+           return -1;
+       }
+       }
